@@ -1,11 +1,20 @@
 {
-    "MyTask1": {},
-    "MyTask2": {},
-    "MyTask3": {},
-    "MyTask4": {
-        "recognition": "Custom",
-        "custom_recognition": "my_reco_222",
-        "action": "Custom",
-        "custom_action": "my_action_111"
+    "点击确认选择":
+    {
+        "recognition": "OCR",
+        "expected": "确认选择",
+        "action": "click",
+        "next": [
+            "点击开始挑战"
+        ]
+    },
+    "点击开始挑战":
+    {
+        "recognition": "OCR",
+        "expected": "开始挑战",
+        "action": "click",
+        "next": []
     }
+
+    
 }
