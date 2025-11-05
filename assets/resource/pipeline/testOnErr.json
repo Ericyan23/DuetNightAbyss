@@ -1,0 +1,48 @@
+{
+    "startTest":{
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "next": ["againForTest"],
+        "timeout": 8000,
+        "interrupt": ["autoBattle"],
+        "on_error": ["exitBattle"]
+    },
+    "againForTest":{
+        "recognition": "OCR",
+        "expected": ["再次挑战"],
+        "timeout": 10000,
+        "on_error": ["exitBattle"],
+        "interrupt": ["autoBattle"],
+        "next": ["startChallenge"]
+    },
+    "twoKey":{
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "LongPressMultipleKeys",
+        "custom_action_param": {
+            "keys": [65, 87],
+            "duration": 13000
+        },
+        "next": []
+    },
+    "shift":{
+        "recognition": "DirectHit",
+        "action": "LongPressKey",
+        "key": 2,
+        "duration": 5000,
+        "next": []
+    },
+    "sequentialPress": {
+        "recognition": "DirectHit",
+        "action": "Custom",
+        "custom_action": "SequentialLongPress",
+        "custom_action_param": {
+            "key_sequence": [
+                {"key": 65, "delay": 0},
+                {"key": 2, "delay": 500}
+            ],
+            "hold_duration": 13000
+        },
+        "next": []
+    }
+}

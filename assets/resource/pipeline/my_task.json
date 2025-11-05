@@ -1,20 +1,18 @@
 {
-    "点击确认选择":
-    {
+    "点击继续挑战": {
         "recognition": "OCR",
-        "expected": "确认选择",
-        "action": "click",
+        "expected": "继续挑战",
+        "action": "Click",
         "next": [
             "点击开始挑战"
         ]
     },
-    "点击开始挑战":
-    {
+    "点击开始挑战": {
         "recognition": "OCR",
         "expected": "开始挑战",
-        "action": "click",
-        "next": []
+        "action": "Click",
+        "next": [
+            "点击继续挑战"
+        ]
     }
-
-    
 }
